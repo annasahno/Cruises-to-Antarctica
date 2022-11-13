@@ -1,0 +1,49 @@
+.main-screen {
+  min-height: 567px;
+  padding: 152px 95px 40px;
+  color: $color-alice-blue;
+  text-shadow: $shadow;
+
+  @media (max-width: $vp-1023) {
+    min-height: 570px;
+    padding: 168px 0 40px;
+  }
+
+  @media (max-width: $vp-767) {
+    min-height: 451px;
+    padding: 104px 0 40px;
+  }
+}
+
+.main-screen h1 {
+  margin-bottom: 12px;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  @media (max-width: $vp-1023) {
+    font-size: 50px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 8px;
+    font-size: 36px;
+    line-height: 1.25;
+  }
+}
+
+.main-screen p {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 1.2;
+
+  @media (max-width: $vp-1023) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 16px;
+    line-height: 1.4;
+    width: 80%;
+  }
+}

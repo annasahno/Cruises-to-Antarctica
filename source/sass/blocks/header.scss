@@ -1,15 +1,35 @@
 .header {
   padding-top: 35px;
-  background-color: $color-tangaroa;
+
   color: $color-alice-blue;
+  background-image: url("../img/main-screen-bg-desktop.jpg");
+  background-color: $color-tangaroa;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  box-shadow: $shadow;
+
+  @include retina {
+    background-image: url("../img/main-screen-bg-desktop@2x.jpg");
+  }
 
   @media (max-width: $vp-1023) {
     padding-top: 20px;
+    background-image: url("../img/main-screen-bg-tablet.jpg");
+    box-shadow: none;
+
+    @include retina {
+      background-image: url("../img/main-screen-bg-tablet@2x.jpg");
+    }
   }
 
   @media (max-width: $vp-767) {
     position: relative;
-    min-height: 50px;
+    background-image: url("../img/main-screen-bg-phone.jpg");
+
+    @include retina {
+      background-image: url("../img/main-screen-bg-phone@2x.jpg");
+    }
   }
 }
 
@@ -20,7 +40,7 @@
 }
 
 .header__logo-image {
-  text-shadow: $text-shadow;
+  text-shadow: $shadow;
 
   @media (max-width: $vp-1023) {
     margin-top: 10px;
@@ -65,7 +85,7 @@
 .header__link {
   margin-left: 33px;
   padding-top: 8px;
-  text-shadow: $text-shadow;
+  text-shadow: $shadow;
 
   @include hover-focus {
     opacity: 0.8;

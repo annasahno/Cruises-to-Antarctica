@@ -12,6 +12,15 @@
     padding: 0 15px;
   }
 
+  &--description {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $vp-767) {
+      display: block;
+    }
+  }
+
   &--footer {
     display: flex;
 
