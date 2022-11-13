@@ -1,0 +1,146 @@
+.features {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    background-image: url("../img/features-bg-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+
+    @include retina {
+      background-image: url("../img/features-bg-desktop@2x.jpg");
+    }
+  }
+
+  &::before {
+    background-color: $color-solitude;
+  }
+
+  @media (max-width: $vp-1023) {
+    &::after {
+      background-image: url("../img/features-bg-tablet.jpg");
+
+      @include retina {
+        background-image: url("../img/features-bg-tablet@2x.jpg");
+      }
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    &::after {
+      background-image: url("../img/features-bg-phone.jpg");
+
+      @include retina {
+        background-image: url("../img/features-bg-phone@2x.jpg");
+      }
+    }
+  }
+}
+
+.features__title {
+  margin-bottom: 46px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 50px;
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 32px;
+    font-size: 24px;
+  }
+}
+
+.features__list {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  list-style: none;
+
+  @media (max-width: $vp-1023) {
+    gap: 30px;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.features__item {
+  padding: 32px 30px 28px;
+  background-color: $color-alice-blue;
+
+  @media (max-width: $vp-1023) {
+    padding: 26px 16px 8px 20px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 24px 16px 8px 20px;
+  }
+}
+
+.features__item h3 {
+  margin-top: 12px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 10px;
+    width: 75%;
+    line-height: 1.4;
+  }
+}
+
+.features__item p {
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.features__item--liner svg {
+  @media (max-width: $vp-1023) {
+    width: 21px;
+    height: 26px;
+  }
+}
+
+.features__item--check svg {
+  @media (max-width: $vp-1023) {
+    width: 27px;
+    height: 26px;
+  }
+}
+
+.features__item--zodiac svg {
+  @media (max-width: $vp-1023) {
+    width: 36px;
+    height: 26px;
+  }
+}
+
+.features__item--zodiac h3 {
+  @media (max-width: $vp-1023) {
+    margin-bottom: 20px;
+  }
+}
