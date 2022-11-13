@@ -11,4 +11,12 @@
   @media (max-width: $vp-767) {
     padding: 0 15px;
   }
+
+  &--footer {
+    display: flex;
+
+    @media (max-width: $vp-767) {
+      flex-direction: column;
+    }
+  }
 }
