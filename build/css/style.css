@@ -654,6 +654,11 @@ button,
   padding-bottom: 106px;
 }
 
+.container--catalog {
+  padding-top: 62px;
+  padding-bottom: 104px;
+}
+
 .container--footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -801,7 +806,7 @@ button,
   background-color: #011c40;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center center;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -992,6 +997,166 @@ button,
   line-height: 1.4;
 }
 
+.catalog__title {
+  margin-bottom: 49px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.catalog__list {
+  padding: 0 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  list-style: none;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  position: relative;
+  padding: 28px 25px 36px;
+  min-height: 386px;
+  background-color: #011c40;
+  color: #f9fbfd;
+  overflow: hidden;
+}
+
+.card:hover,
+.card:focus-within {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #011c40;
+}
+
+.card:hover h3,
+.card:focus-within h3 {
+  position: static;
+}
+
+.card:hover::after,
+.card:focus-within::after {
+  display: none;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card--astoria::after,
+.card--eline::after {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-1.jpg");
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-1.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-1.jpg");
+}
+
+.card--atlantis::after {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-3.jpg");
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-3.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-3.jpg");
+}
+
+.card--odysseus::after {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-4-desktop.jpg");
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-desktop.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-desktop.jpg");
+}
+
+.card--olimpia::after {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-5-desktop.jpg");
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-desktop.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-desktop.jpg");
+}
+
+.card--aurora::after {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-6-desktop.jpg");
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-desktop.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-desktop.jpg");
+}
+
+.card--leonor::after {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-7-desktop.jpg");
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-desktop.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-desktop.jpg");
+}
+
+.card--minion::after {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-8-desktop.jpg");
+  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-desktop.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-desktop.jpg");
+}
+
+.card img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-color: #011c40;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 18px;
+  z-index: 1;
+  position: relative;
+  left: 5px;
+  bottom: -27px;
+}
+
+.card dl {
+  margin: 0;
+}
+
+.card dt {
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.card dd {
+  margin-left: 0;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.card a {
+  margin-top: auto;
+  padding: 10px;
+  background-color: #f9fbfd;
+  color: #011c40;
+  font-weight: 600;
+  font-size: 14px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .footer {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1086,6 +1251,46 @@ button,
   }
 */
 
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
+  .header {
+    background-image: url("../img/main-screen-bg-desktop@2x.jpg");
+  }
+
+  .features::after {
+    background-image: url("../img/features-bg-desktop@2x.jpg");
+  }
+
+  .card--odysseus::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-4-desktop@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-desktop@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-desktop@2x.jpg");
+  }
+
+  .card--olimpia::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-5-desktop@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-desktop@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-desktop@2x.jpg");
+  }
+
+  .card--aurora::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-6-desktop@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-desktop@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-desktop@2x.jpg");
+  }
+
+  .card--leonor::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-7-desktop@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-desktop@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-desktop@2x.jpg");
+  }
+
+  .card--minion::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-8-desktop@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-desktop@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-desktop@2x.jpg");
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     padding-left: 45px;
@@ -1094,6 +1299,11 @@ button,
 
   .container--features {
     padding-top: 68px;
+    padding-bottom: 84px;
+  }
+
+  .container--catalog {
+    padding-top: 70px;
     padding-bottom: 84px;
   }
 
@@ -1196,6 +1406,60 @@ button,
     margin-bottom: 20px;
   }
 
+  .catalog__title {
+    margin-bottom: 51px;
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .catalog__list {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card--odysseus::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-4-tablet.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-tablet.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-tablet.jpg");
+  }
+
+  .card--olimpia::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-5-tablet.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-tablet.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-tablet.jpg");
+  }
+
+  .card--aurora::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-6-tablet.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-tablet.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-tablet.jpg");
+  }
+
+  .card--leonor::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-7-tablet.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-tablet.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-tablet.jpg");
+  }
+
+  .card--minion::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-8-tablet.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-tablet.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-tablet.jpg");
+  }
+
+  .card {
+    padding: 30px 35px 36px;
+  }
+
+  .card h3 {
+    left: 0;
+    bottom: -22px;
+  }
+
+  .card a {
+    padding: 8px;
+  }
+
   .footer {
     padding-top: 40px;
   }
@@ -1244,6 +1508,36 @@ button,
   .features::after {
     background-image: url("../img/features-bg-tablet@2x.jpg");
   }
+
+  .card--odysseus::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-4-tablet@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-tablet@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-tablet@2x.jpg");
+  }
+
+  .card--olimpia::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-5-tablet@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-tablet@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-tablet@2x.jpg");
+  }
+
+  .card--aurora::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-6-tablet@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-tablet@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-tablet@2x.jpg");
+  }
+
+  .card--leonor::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-7-tablet@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-tablet@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-tablet@2x.jpg");
+  }
+
+  .card--minion::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-8-tablet@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-tablet@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-tablet@2x.jpg");
+  }
 }
 
 @media (max-width: 767px) {
@@ -1257,6 +1551,11 @@ button,
   }
 
   .container--features {
+    padding-top: 38px;
+    padding-bottom: 49px;
+  }
+
+  .container--catalog {
     padding-top: 38px;
     padding-bottom: 49px;
   }
@@ -1430,6 +1729,49 @@ button,
     line-height: 1.4;
   }
 
+  .catalog__title {
+    margin-bottom: 32px;
+    font-size: 24px;
+  }
+
+  .catalog__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .card--odysseus::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-4-phone.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-phone.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-phone.jpg");
+  }
+
+  .card--olimpia::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-5-phone.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-phone.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-phone.jpg");
+  }
+
+  .card--leonor::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-7-phone.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-phone.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-phone.jpg");
+  }
+
+  .card--minion::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-8-phone.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-phone.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-phone.jpg");
+  }
+
+  .card {
+    padding: 29px 25px 36px;
+  }
+
+  .card h3 {
+    bottom: -32px;
+  }
+
   .footer {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -1482,6 +1824,30 @@ button,
   .features::after {
     background-image: url("../img/features-bg-phone@2x.jpg");
   }
+
+  .card--odysseus::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-4-phone@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-phone@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-phone@2x.jpg");
+  }
+
+  .card--olimpia::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-5-phone@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-phone@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-phone@2x.jpg");
+  }
+
+  .card--leonor::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-7-phone@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-phone@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-phone@2x.jpg");
+  }
+
+  .card--minion::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-8-phone@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-phone@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-phone@2x.jpg");
+  }
 }
 
 @media (hover: hover) {
@@ -1503,11 +1869,16 @@ button,
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .header {
-    background-image: url("../img/main-screen-bg-desktop@2x.jpg");
+  .card--astoria::after,
+  .card--eline::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-1@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-1@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-1@2x.jpg");
   }
 
-  .features::after {
-    background-image: url("../img/features-bg-desktop@2x.jpg");
+  .card--atlantis::after {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-3@2x.jpg");
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-3@2x.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-3@2x.jpg");
   }
 }

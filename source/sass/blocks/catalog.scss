@@ -1,0 +1,34 @@
+.catalog__title {
+  margin-bottom: 49px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 51px;
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 32px;
+    font-size: 24px;
+  }
+}
+
+.catalog__list {
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  list-style: none;
+
+  @media (max-width: $vp-1023) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+}

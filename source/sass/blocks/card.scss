@@ -1,0 +1,246 @@
+.card {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding: 28px 25px 36px;
+  min-height: 386px;
+  background-color: $color-tangaroa;
+  color: $color-alice-blue;
+  overflow: hidden;
+
+  &:hover,
+  &:focus-within {
+    flex-direction: column;
+    background-color: $color-tangaroa;
+
+    h3 {
+      position: static;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &--astoria::after,
+  &--eline::after {
+    background-image: $card-gradient, url("../img/product/product-1.jpg");
+
+    @include retina {
+      background-image: $card-gradient, url("../img/product/product-1@2x.jpg");
+    }
+  }
+
+  &--atlantis::after {
+    background-image: $card-gradient, url("../img/product/product-3.jpg");
+
+    @include retina {
+      background-image: $card-gradient, url("../img/product/product-3@2x.jpg");
+    }
+  }
+
+  &--odysseus::after {
+    background-image: $card-gradient, url("../img/product/product-4-desktop.jpg");
+
+    @media (min-width: $vp-1024) {
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-4-desktop@2x.jpg");
+      }
+    }
+
+    @media (max-width: $vp-1023) {
+      background-image: $card-gradient, url("../img/product/product-4-tablet.jpg");
+
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-4-tablet@2x.jpg");
+      }
+    }
+
+    @media (max-width: $vp-767) {
+      background-image: $card-gradient, url("../img/product/product-4-phone.jpg");
+
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-4-phone@2x.jpg");
+      }
+    }
+  }
+
+  &--olimpia::after {
+    background-image: $card-gradient, url("../img/product/product-5-desktop.jpg");
+
+    @media (min-width: $vp-1024) {
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-5-desktop@2x.jpg");
+      }
+    }
+
+    @media (max-width: $vp-1023) {
+      background-image: $card-gradient, url("../img/product/product-5-tablet.jpg");
+
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-5-tablet@2x.jpg");
+      }
+    }
+
+    @media (max-width: $vp-767) {
+      background-image: $card-gradient, url("../img/product/product-5-phone.jpg");
+
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-5-phone@2x.jpg");
+      }
+    }
+  }
+
+  &--aurora::after {
+    background-image: $card-gradient, url("../img/product/product-6-desktop.jpg");
+
+    @media (min-width: $vp-1024) {
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-6-desktop@2x.jpg");
+      }
+    }
+
+    @media (max-width: $vp-1023) {
+      background-image: $card-gradient, url("../img/product/product-6-tablet.jpg");
+
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-6-tablet@2x.jpg");
+      }
+    }
+  }
+
+  &--leonor::after {
+    background-image: $card-gradient, url("../img/product/product-7-desktop.jpg");
+
+    @media (min-width: $vp-1024) {
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-7-desktop@2x.jpg");
+      }
+    }
+
+    @media (max-width: $vp-1023) {
+      background-image: $card-gradient, url("../img/product/product-7-tablet.jpg");
+
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-7-tablet@2x.jpg");
+      }
+    }
+
+    @media (max-width: $vp-767) {
+      background-image: $card-gradient, url("../img/product/product-7-phone.jpg");
+
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-7-phone@2x.jpg");
+      }
+    }
+  }
+
+  &--minion::after {
+    background-image: $card-gradient, url("../img/product/product-8-desktop.jpg");
+
+    @media (min-width: $vp-1024) {
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-8-desktop@2x.jpg");
+      }
+    }
+
+    @media (max-width: $vp-1023) {
+      background-image: $card-gradient, url("../img/product/product-8-tablet.jpg");
+
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-8-tablet@2x.jpg");
+      }
+    }
+
+    @media (max-width: $vp-767) {
+      background-image: $card-gradient, url("../img/product/product-8-phone.jpg");
+
+      @include retina {
+        background-image: $card-gradient, url("../img/product/product-8-phone@2x.jpg");
+      }
+    }
+  }
+
+  @media (max-width: $vp-1023) {
+    padding: 30px 35px 36px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 29px 25px 36px;
+  }
+}
+
+.card img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  object-fit: cover;
+  background-color: $color-tangaroa;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 18px;
+  z-index: 1;
+  position: relative;
+  left: 5px;
+  bottom: -27px;
+
+  @media (max-width: $vp-1023) {
+    left: 0;
+    bottom: -22px;
+  }
+
+  @media (max-width: $vp-767) {
+    bottom: -32px;
+  }
+}
+
+.card dl {
+  margin: 0;
+}
+
+.card dt {
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.card dd {
+  margin-left: 0;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.card a {
+  margin-top: auto;
+  padding: 10px;
+  background-color: $color-alice-blue;
+  color: $color-tangaroa;
+  font-weight: 600;
+  font-size: 14px;
+  justify-content: center;
+
+  @media (max-width: $vp-1023) {
+    padding: 8px;
+  }
+}

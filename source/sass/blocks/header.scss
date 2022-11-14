@@ -6,11 +6,13 @@
   background-color: $color-tangaroa;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center center;
   box-shadow: $shadow;
 
-  @include retina {
-    background-image: url("../img/main-screen-bg-desktop@2x.jpg");
+  @media (min-width: $vp-1024) {
+    @include retina {
+      background-image: url("../img/main-screen-bg-desktop@2x.jpg");
+    }
   }
 
   @media (max-width: $vp-1023) {
