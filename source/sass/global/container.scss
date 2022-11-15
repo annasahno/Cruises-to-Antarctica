@@ -54,6 +54,26 @@
     }
   }
 
+  &--booking {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media (max-width: $vp-1023) {
+      padding-top: 62px;
+      padding-bottom: 100px;
+      display: block;
+      text-align: center;
+    }
+
+    @media (max-width: $vp-767) {
+      padding-top: 33px;
+      padding-bottom: 65px;
+    }
+  }
+
   &--footer {
     display: flex;
 

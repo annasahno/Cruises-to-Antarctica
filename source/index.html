@@ -115,7 +115,7 @@
                 <dt>Продолжительность</dt>
                 <dd>11 дней</dd>
                 <dt>Цена</dt>
-                <dd>от 11500 $</dd>
+                <dd class="card__price">от 11500 $</dd>
               </dl>
               <a class="btn" href="#">Забронировать</a>
             </li>
@@ -129,7 +129,7 @@
                 <dt>Продолжительность</dt>
                 <dd>20 дней</dd>
                 <dt>Цена</dt>
-                <dd>от 14500 $</dd>
+                <dd class="card__price">от 14500 $</dd>
               </dl>
               <a class="btn" href="#">Забронировать</a>
             </li>
@@ -143,7 +143,7 @@
                 <dt>Продолжительность</dt>
                 <dd>15 дней</dd>
                 <dt>Цена</dt>
-                <dd>от 14500 $</dd>
+                <dd class="card__price">от 14500 $</dd>
               </dl>
               <a class="btn" href="#">Забронировать</a>
             </li>
@@ -157,7 +157,7 @@
                 <dt>Продолжительность</dt>
                 <dd>13 дней</dd>
                 <dt>Цена</dt>
-                <dd>от 9700 $</dd>
+                <dd class="card__price">от 9700 $</dd>
               </dl>
               <a class="btn" href="#">Забронировать</a>
             </li>
@@ -171,7 +171,7 @@
                 <dt>Продолжительность</dt>
                 <dd>21 день</dd>
                 <dt>Цена</dt>
-                <dd>от 18600 $</dd>
+                <dd class="card__price">от 18600 $</dd>
               </dl>
               <a class="btn" href="#">Забронировать</a>
             </li>
@@ -185,7 +185,7 @@
                 <dt>Продолжительность</dt>
                 <dd>14 дней</dd>
                 <dt>Цена</dt>
-                <dd>от 11700 $</dd>
+                <dd class="card__price">от 11700 $</dd>
               </dl>
               <a class="btn" href="#">Забронировать</a>
             </li>
@@ -199,7 +199,7 @@
                 <dt>Продолжительность</dt>
                 <dd>17 дней</dd>
                 <dt>Цена</dt>
-                <dd>от 12500 $</dd>
+                <dd class="card__price">от 12500 $</dd>
               </dl>
               <a class="btn" href="#">Забронировать</a>
             </li>
@@ -213,7 +213,7 @@
                 <dt>Продолжительность</dt>
                 <dd>11 дней</dd>
                 <dt>Цена</dt>
-                <dd>от 12300 $</dd>
+                <dd class="card__price">от 12300 $</dd>
               </dl>
               <a class="btn" href="#">Забронировать</a>
             </li>
@@ -221,6 +221,40 @@
         </div>
       </section>
 
+      <section class="booking">
+        <picture>
+          <source type="image/webp" srcset="img/form-bg.webp 1x, img/form-bg@2x.webp 2x">
+          <img class="booking__img" src="img/form-bg.jpg" srcset="img/form-bg@2x.jpg 2x" aria-hidden="true" alt=""
+            width="1366" height="910">
+        </picture>
+        <div class="container container--booking">
+          <div class="booking__wrapper">
+            <h2>Раннее бронирование</h2>
+            <p>Забронируйте тур за&nbsp;3&nbsp;-&nbsp;6&nbsp;месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%
+            </p>
+          </div>
+          <form class="booking__form form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+            <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
+            <label class="visually-hidden" for="name">Введите имя</label>
+            <input type="text" id="name" name="name" placeholder="Имя" pattern="^[А-Яа-яЁёa-zA-Z\-\s]+$" maxlength="100"
+              title="Разрешено использовать только буквы, пробелы и дефис" required>
+
+            <label class="visually-hidden" for="tel">Введите номер телефона</label>
+            <input type="tel" id="tel" name="tel" placeholder="Телефон" maxlength="18" pattern="^[\s\d\-\(\)]+$"
+              title="Введите цифры" required>
+
+            <label class="visually-hidden" for="email">Введите адрес электронной почты</label>
+            <input type="email" id="email" name="email" placeholder="Email" title="Введите 10 цифр" required>
+
+            <div class="form__checkbox">
+              <input type="checkbox" id="сonsent" name="сonsent" required checked>
+              <label for="сonsent"><span></span>Я согласен на&nbsp;обработку моих&nbsp;персональных данных</label>
+            </div>
+
+            <button class="btn form__button" type="submit">Оставить заявку</button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

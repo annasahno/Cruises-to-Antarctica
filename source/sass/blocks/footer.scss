@@ -48,6 +48,10 @@
 .footer__link {
   padding: 10px;
 
+  @include hover-focus {
+    opacity: 0.8;
+  }
+  
   @media (max-width: $vp-1023) {
     padding: 6px;
     font-size: 12px;

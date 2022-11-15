@@ -1,0 +1,81 @@
+.booking {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.booking__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 -18px;
+  z-index: -1;
+
+  @media (max-width: $vp-1023) {
+    height: 123%;
+    object-position: -503px -13px;
+  }
+
+  @media (max-width: $vp-767) {
+    height: 106%;
+    object-position: -486px -46px;
+  }
+}
+
+.booking__wrapper {
+  max-width: 500px;
+  margin-top: 26px;
+
+  @media (max-width: $vp-1023) {
+    max-width: none;
+  }
+}
+
+.booking h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 40px;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 6px;
+    font-size: 34px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}
+
+.booking p {
+  margin-top: 0;
+  margin-bottom: 34px;
+  max-width: 350px;
+  font-weight: 400;
+  font-size: 18px;
+
+  @media (max-width: $vp-1023) {
+    max-width: 390px;
+    margin: 0 auto 51px;
+  }
+
+  @media (max-width: $vp-767) {
+    max-width: 99%;
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+.booking__form {
+  margin-left: 24px;
+
+  @media (max-width: $vp-1023) {
+    margin: 0 auto;
+  }
+}
