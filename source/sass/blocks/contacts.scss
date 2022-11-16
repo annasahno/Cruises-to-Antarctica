@@ -27,6 +27,7 @@
 
 .contacts__google-map {
   @media (max-width: $vp-1023) {
+    width: 100%;
     height: 335px;
   }
 

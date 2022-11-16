@@ -437,6 +437,7 @@ html {
   line-height: 1.5;
   font-family: "Montserrat", "Arial", sans-serif;
   color: #011c40;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -670,6 +671,19 @@ button,
   align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.container--contacts {
+  padding-top: 120px;
+  padding-bottom: 113px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 560px auto;
+  grid-template-columns: 560px auto;
+  gap: 100px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .container--footer {
@@ -1026,6 +1040,19 @@ button,
   list-style: none;
 }
 
+.card img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-color: #011c40;
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1042,6 +1069,18 @@ button,
   overflow: hidden;
 }
 
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(1, 28, 64, 0)), to(#011C40));
+  background: -o-linear-gradient(top, rgba(1, 28, 64, 0) 50%, #011C40 100%);
+  background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011C40 100%);
+}
+
 .card:hover,
 .card:focus-within {
   -webkit-box-orient: vertical;
@@ -1049,6 +1088,11 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: #011c40;
+}
+
+.card:hover img,
+.card:focus-within img {
+  z-index: -1;
 }
 
 .card:hover h3,
@@ -1059,74 +1103,6 @@ button,
 .card:hover::after,
 .card:focus-within::after {
   display: none;
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.card--astoria::after,
-.card--eline::after {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-1.jpg");
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-1.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-1.jpg");
-}
-
-.card--atlantis::after {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-3.jpg");
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-3.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-3.jpg");
-}
-
-.card--odysseus::after {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-4-desktop.jpg");
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-desktop.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-desktop.jpg");
-}
-
-.card--olimpia::after {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-5-desktop.jpg");
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-desktop.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-desktop.jpg");
-}
-
-.card--aurora::after {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-6-desktop.jpg");
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-desktop.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-desktop.jpg");
-}
-
-.card--leonor::after {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-7-desktop.jpg");
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-desktop.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-desktop.jpg");
-}
-
-.card--minion::after {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-8-desktop.jpg");
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-desktop.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-desktop.jpg");
-}
-
-.card img {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  right: 0;
-  -o-object-fit: cover;
-  object-fit: cover;
-  background-color: #011c40;
 }
 
 .card h3 {
@@ -1361,9 +1337,64 @@ input[type=checkbox]:checked + label span::after {
   transform: rotate(-45deg);
 }
 
+.contacts {
+  overflow: hidden;
+}
+
+.contacts__wrapper {
+  position: relative;
+}
+
+.contacts__wrapper--text {
+  max-width: 500px;
+}
+
+.contacts__pin {
+  display: none;
+  position: absolute;
+  bottom: 74px;
+  left: 249px;
+}
+
+.contacts__img-map {
+  margin-bottom: 7px;
+  display: none;
+  height: 306px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 0 -6px;
+  object-position: 0 -6px;
+}
+
+.contacts h2 {
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.contacts p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.contacts svg {
+  margin-right: 10px;
+}
+
+.no-js .contacts__google-map {
+  display: none;
+}
+
+.no-js .contacts__img-map,
+.no-js .contacts__pin {
+  display: block;
+}
+
 .footer {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 43px;
   background-color: #011c40;
   color: #f9fbfd;
 }
@@ -1467,36 +1498,6 @@ input[type=checkbox]:checked + label span::after {
   .features::after {
     background-image: url("../img/features-bg-desktop@2x.jpg");
   }
-
-  .card--odysseus::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-4-desktop@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-desktop@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-desktop@2x.jpg");
-  }
-
-  .card--olimpia::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-5-desktop@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-desktop@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-desktop@2x.jpg");
-  }
-
-  .card--aurora::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-6-desktop@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-desktop@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-desktop@2x.jpg");
-  }
-
-  .card--leonor::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-7-desktop@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-desktop@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-desktop@2x.jpg");
-  }
-
-  .card--minion::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-8-desktop@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-desktop@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-desktop@2x.jpg");
-  }
 }
 
 @media (max-width: 1023px) {
@@ -1520,6 +1521,16 @@ input[type=checkbox]:checked + label span::after {
     padding-bottom: 100px;
     display: block;
     text-align: center;
+  }
+
+  .container--contacts {
+    padding-top: 100px;
+    padding-bottom: 93px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
 
   .header {
@@ -1632,36 +1643,6 @@ input[type=checkbox]:checked + label span::after {
     grid-template-columns: 1fr 1fr;
   }
 
-  .card--odysseus::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-4-tablet.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-tablet.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-tablet.jpg");
-  }
-
-  .card--olimpia::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-5-tablet.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-tablet.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-tablet.jpg");
-  }
-
-  .card--aurora::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-6-tablet.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-tablet.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-tablet.jpg");
-  }
-
-  .card--leonor::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-7-tablet.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-tablet.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-tablet.jpg");
-  }
-
-  .card--minion::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-8-tablet.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-tablet.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-tablet.jpg");
-  }
-
   .card {
     padding: 30px 35px 36px;
   }
@@ -1673,12 +1654,6 @@ input[type=checkbox]:checked + label span::after {
 
   .card a {
     padding: 8px;
-  }
-
-  .booking__img {
-    height: 123%;
-    -o-object-position: -503px -13px;
-    object-position: -503px -13px;
   }
 
   .booking__wrapper {
@@ -1722,6 +1697,45 @@ input[type=checkbox]:checked + label span::after {
 
   .form__checkbox span {
     top: -3px;
+  }
+
+  .contacts__wrapper--text {
+    max-width: none;
+    margin-top: 0;
+  }
+
+  .contacts__google-map {
+    width: 100%;
+    height: 335px;
+  }
+
+  .contacts__pin {
+    bottom: 102px;
+    left: 109px;
+  }
+
+  .contacts__img-map {
+    height: 336px;
+    -o-object-position: -153px 0;
+    object-position: -153px 0;
+  }
+
+  .contacts h2 {
+    margin-top: 11px;
+    margin-bottom: 26px;
+  }
+
+  .contacts p {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 28px auto;
+    grid-template-columns: 28px auto;
+    margin-bottom: 20px;
+  }
+
+  .contacts svg {
+    margin-right: 0;
+    margin-top: 5px;
   }
 
   .footer {
@@ -1772,36 +1786,6 @@ input[type=checkbox]:checked + label span::after {
   .features::after {
     background-image: url("../img/features-bg-tablet@2x.jpg");
   }
-
-  .card--odysseus::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-4-tablet@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-tablet@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-tablet@2x.jpg");
-  }
-
-  .card--olimpia::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-5-tablet@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-tablet@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-tablet@2x.jpg");
-  }
-
-  .card--aurora::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-6-tablet@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-tablet@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-6-tablet@2x.jpg");
-  }
-
-  .card--leonor::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-7-tablet@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-tablet@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-tablet@2x.jpg");
-  }
-
-  .card--minion::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-8-tablet@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-tablet@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-tablet@2x.jpg");
-  }
 }
 
 @media (max-width: 767px) {
@@ -1827,6 +1811,14 @@ input[type=checkbox]:checked + label span::after {
   .container--booking {
     padding-top: 33px;
     padding-bottom: 65px;
+  }
+
+  .container--contacts {
+    padding-top: 43px;
+    padding-bottom: 58px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .container--footer {
@@ -2009,42 +2001,12 @@ input[type=checkbox]:checked + label span::after {
     padding: 0 10px;
   }
 
-  .card--odysseus::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-4-phone.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-phone.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-phone.jpg");
-  }
-
-  .card--olimpia::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-5-phone.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-phone.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-phone.jpg");
-  }
-
-  .card--leonor::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-7-phone.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-phone.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-phone.jpg");
-  }
-
-  .card--minion::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-8-phone.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-phone.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-phone.jpg");
-  }
-
   .card {
     padding: 29px 25px 36px;
   }
 
   .card h3 {
     bottom: -32px;
-  }
-
-  .booking__img {
-    height: 106%;
-    -o-object-position: -486px -46px;
-    object-position: -486px -46px;
   }
 
   .booking h2 {
@@ -2084,9 +2046,44 @@ input[type=checkbox]:checked + label span::after {
     top: 2px;
   }
 
+  .contacts__wrapper {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+
+  .contacts__wrapper--text {
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+
+  .contacts__google-map {
+    height: 316px;
+  }
+
+  .contacts__pin {
+    bottom: 77px;
+    left: 112px;
+  }
+
+  .contacts__img-map {
+    height: 318px;
+    margin-bottom: 4px;
+    -o-object-position: -134px 0;
+    object-position: -134px 0;
+  }
+
+  .contacts h2 {
+    margin-top: 15px;
+    margin-bottom: 28px;
+  }
+
+  .contacts svg {
+    margin-top: 3px;
+  }
+
   .footer {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 28px;
   }
 
   .footer__list {
@@ -2136,30 +2133,6 @@ input[type=checkbox]:checked + label span::after {
   .features::after {
     background-image: url("../img/features-bg-phone@2x.jpg");
   }
-
-  .card--odysseus::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-4-phone@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-phone@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-4-phone@2x.jpg");
-  }
-
-  .card--olimpia::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-5-phone@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-phone@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-5-phone@2x.jpg");
-  }
-
-  .card--leonor::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-7-phone@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-phone@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-7-phone@2x.jpg");
-  }
-
-  .card--minion::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-8-phone@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-phone@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-8-phone@2x.jpg");
-  }
 }
 
 @media (hover: hover) {
@@ -2188,20 +2161,5 @@ input[type=checkbox]:checked + label span::after {
 
   .social__icon:hover:not(.focus-visible) {
     opacity: 0.8;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .card--astoria::after,
-  .card--eline::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-1@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-1@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-1@2x.jpg");
-  }
-
-  .card--atlantis::after {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(#011c40)), url("../img/product/product-3@2x.jpg");
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-3@2x.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, #011c40 100%), url("../img/product/product-3@2x.jpg");
   }
 }

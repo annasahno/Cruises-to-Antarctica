@@ -3,7 +3,6 @@
   overflow: hidden;
 }
 
-
 .booking__img {
   position: absolute;
   top: 0;
@@ -13,16 +12,6 @@
   object-fit: cover;
   object-position: 0 -18px;
   z-index: -1;
-
-  @media (max-width: $vp-1023) {
-    height: 123%;
-    object-position: -503px -13px;
-  }
-
-  @media (max-width: $vp-767) {
-    height: 106%;
-    object-position: -486px -46px;
-  }
 }
 
 .booking__wrapper {
