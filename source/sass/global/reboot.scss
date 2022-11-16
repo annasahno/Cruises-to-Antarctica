@@ -18,6 +18,7 @@ html {
   line-height: $lh-default;
   font-family: $ff-placeholder;
   color: $color-tangaroa;
+  scroll-behavior: smooth;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

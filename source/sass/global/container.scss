@@ -74,6 +74,30 @@
     }
   }
 
+  &--contacts {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    display: grid;
+    grid-template-columns: 560px auto;
+    gap: 100px;
+    align-items: center;
+
+    @media (max-width: $vp-1023) {
+      padding-top: 100px;
+      padding-bottom: 99px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    @media (max-width: $vp-767) {
+      padding-top: 43px;
+      padding-bottom: 58px;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
   &--footer {
     display: flex;
 

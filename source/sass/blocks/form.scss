@@ -75,9 +75,10 @@
 }
 
 .form__checkbox {
-  margin-top: 20px;
-  margin-bottom: 32px;
-  padding-top: 3px;
+  margin-top: 10px;
+  margin-bottom: 22px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 23px;
   position: relative;
   font-size: 10px;
@@ -90,14 +91,13 @@
   }
 
   @media (max-width: $vp-1023) {
-    margin-top: 22px;
-    padding-top: 0;
+    margin-top: 12px;
     padding-left: 24px;
   }
 
   @media (max-width: $vp-767) {
-    margin-top: 18px;
-    margin-bottom: 25px;
+    margin-top: 8px;
+    margin-bottom: 15px;
     padding-left: 28px;
   }
 }
