@@ -7,7 +7,6 @@
 
   &--text {
     max-width: 500px;
-    margin-top: 6px;
   }
 
   @media (max-width: $vp-1023) {
@@ -26,10 +25,6 @@
   }
 }
 
-.contacts__img-map {
-  display: none;
-}
-
 .contacts__google-map {
   @media (max-width: $vp-1023) {
     height: 335px;
@@ -43,33 +38,36 @@
 .contacts__pin {
   display: none;
   position: absolute;
-  bottom: 67px;
-  left: 250px;
+  bottom: 74px;
+  left: 249px;
 
   @media (max-width: $vp-1023) {
-    bottom: 96px;
+    bottom: 102px;
     left: 109px;
   }
 
   @media (max-width: $vp-767) {
-    bottom: 72px;
+    bottom: 77px;
     left: 112px;
   }
 }
 
-.contacts img {
+.contacts__img-map {
+  margin-bottom: 7px;
+  display: none;
+  height: 306px;
   object-fit: cover;
   object-position: 0 -6px;
-  height: 306px;
 
   @media (max-width: $vp-1023) {
-    object-position: -153px 0;
     height: 336px;
+    object-position: -153px 0;
   }
 
   @media (max-width: $vp-767) {
-    object-position: -134px 0;
     height: 318px;
+    margin-bottom: 4px;
+    object-position: -134px 0;
   }
 }
 
