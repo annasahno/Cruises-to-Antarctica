@@ -700,6 +700,10 @@ button,
   color: #ffffff;
   border: none;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -1088,6 +1092,8 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: #011c40;
+  -webkit-box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
 }
 
 .card:hover img,
@@ -1518,13 +1524,13 @@ input[type=checkbox]:checked + label span::after {
 
   .container--booking {
     padding-top: 62px;
-    padding-bottom: 100px;
+    padding-bottom: 118px;
     display: block;
     text-align: center;
   }
 
   .container--contacts {
-    padding-top: 100px;
+    padding-top: 82px;
     padding-bottom: 93px;
     display: -ms-grid;
     display: grid;
@@ -1810,11 +1816,11 @@ input[type=checkbox]:checked + label span::after {
 
   .container--booking {
     padding-top: 33px;
-    padding-bottom: 65px;
+    padding-bottom: 83px;
   }
 
   .container--contacts {
-    padding-top: 43px;
+    padding-top: 25px;
     padding-bottom: 58px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -1842,6 +1848,7 @@ input[type=checkbox]:checked + label span::after {
   }
 
   .header {
+    min-height: 500px;
     position: relative;
     background-image: url("../img/main-screen-bg-phone.jpg");
   }
@@ -1879,15 +1886,15 @@ input[type=checkbox]:checked + label span::after {
 
   .header__wrapper--opened {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100vh;
     left: 35px;
     right: 0;
-    z-index: 1;
     padding: 20px 15px;
     background-color: #f9fbfd;
     color: #011c40;
+    overflow-y: auto;
   }
 
   .header__wrapper--opened .header__list {
