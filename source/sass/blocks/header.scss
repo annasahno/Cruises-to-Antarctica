@@ -25,7 +25,6 @@
   }
 
   @media (max-width: $vp-767) {
-    min-height: 500px;
     position: relative;
     background-image: url("../img/main-screen-bg-phone.jpg");
 
@@ -35,10 +34,22 @@
   }
 }
 
+.is-active .header__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($color-prussian-blue, 0.5);
+  opacity: 0.5;
+  z-index: 2;
+}
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  z-index: 100;
 }
 
 .header__logo-image {
@@ -113,23 +124,13 @@
     display: block;
     position: fixed;
     top: 0;
-    height: 100vh;
+    height: 100%;
     left: 35px;
     right: 0;
     padding: 20px 15px;
     background-color: $color-alice-blue;
     color: $color-tangaroa;
     overflow-y: auto;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   top: 0;
-    //   left: -40px;
-    //   width: 40px;
-    //   height: 100vh;
-    //   background-color: rgba($color-prussian-blue, 0.5);
-    // }
   }
 }
 
