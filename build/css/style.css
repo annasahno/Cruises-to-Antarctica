@@ -1083,10 +1083,10 @@ button,
   flex-direction: column-reverse;
   position: relative;
   padding: 28px 25px 36px;
-  min-height: 386px;
   background-color: #011c40;
   color: #f9fbfd;
   overflow: hidden;
+  aspect-ratio: 1/1.49;
 }
 
 .card::after {
@@ -1110,6 +1110,7 @@ button,
   background-color: #011c40;
   -webkit-box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
 }
 
 .card:hover img,
@@ -1667,6 +1668,7 @@ input[type=checkbox]:checked + label span::after {
 
   .card {
     padding: 30px 35px 36px;
+    aspect-ratio: 1/1.25;
   }
 
   .card h3 {
@@ -1748,6 +1750,9 @@ input[type=checkbox]:checked + label span::after {
   }
 
   .contacts p {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 28px auto;
@@ -2025,6 +2030,7 @@ input[type=checkbox]:checked + label span::after {
 
   .card {
     padding: 29px 25px 36px;
+    aspect-ratio: 1/1.43;
   }
 
   .card h3 {
