@@ -35,7 +35,6 @@
     flex-direction: column;
     background-color: $color-tangaroa;
     box-shadow: $card-shadow;
-    overflow-y: auto;
 
     img {
       z-index: -1;
@@ -83,6 +82,7 @@
 
 .card dl {
   margin: 0;
+  overflow-y: auto;
 }
 
 .card dt {
