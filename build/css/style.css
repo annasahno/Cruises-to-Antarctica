@@ -1110,6 +1110,7 @@ button,
   background-color: #011c40;
   -webkit-box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
 }
 
 .card:hover img,
@@ -1140,7 +1141,6 @@ button,
 
 .card dl {
   margin: 0;
-  overflow-y: auto;
 }
 
 .card dt {
